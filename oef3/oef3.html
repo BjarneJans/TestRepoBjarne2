@@ -1,13 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Oef3</title>
-    <link href="css/oef3.css" rel="stylesheet">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulier Wingspan</title>
+    <link rel="stylesheet" href="css/oef3.css">
 </head>
 <body>
-  &star;
+<div class="form-wrapper">
+    <h2>Spel-sessie Wingspan</h2>
+
+
+    <!--
+TODO
+-imagie toevoegen en juiste stersymbool zoeken + uitlijnen
+-veldgroottes matchen aan voorbeeld
+-->
+
+    <img src="" alt="Wingspan speldoos" class="game-image">
+
+    <form action="verwerk.html" method="get" class="form-container">
+        <div class="form-group">
+            <label for="datum">Datum:</label>
+            <input type="date" id="datum" name="datum" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="start">Start:</label>
+                <input type="number" id="start" name="start" min="0" max="23" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tijdsduur">Tijdsduur:</label>
+                <input type="number" id="tijdsduur" name="tijdsduur" min="1" max="12" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="complexiteit">Complexiteit:</label>
+            <input type="range" id="complexiteit" name="complexiteit" min="1" max="10" value="5">
+        </div>
+
+        <div class="form-group">
+            <label for="geluk">Geluk:</label>
+            <input type="range" id="geluk" name="geluk" min="1" max="10" value="5">
+        </div>
+
+        <div class="form-group">
+            <label for="strategie">Strategie:</label>
+            <input type="range" id="strategie" name="strategie" min="1" max="10" value="5">
+        </div>
+
+        <div class="form-group textarea-group">
+            <label for="beschrijving">Beschrijving:</label>
+            <textarea id="beschrijving" name="beschrijving" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Aantal sterren:</label>
+            <div class="star-choice">
+                <input type="radio" id="sterren1" name="sterren" value="1" required>
+                <label for="sterren1" class="round-btn"></label>
+                <span class="stars">★</span>
+
+                <input type="radio" id="sterren2" name="sterren" value="2">
+                <label for="sterren2" class="round-btn"></label>
+                <span class="stars">★★</span>
+
+                <input type="radio" id="sterren3" name="sterren" value="3">
+                <label for="sterren3" class="round-btn"></label>
+                <span class="stars">★★★</span>
+
+                <input type="radio" id="sterren4" name="sterren" value="4">
+                <label for="sterren4" class="round-btn"></label>
+                <span class="stars">★★★★</span>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Bewaar</button>
+    </form>
+</div>
 </body>
 </html>

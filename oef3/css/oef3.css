@@ -1,2 +1,87 @@
-/*  Naam: 
+/*  Naam: Bjarne Jans
 */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    padding: 20px;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.game-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="range"],
+textarea {
+    flex: 1;
+}
+
+.textarea-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.textarea-group label {
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #f0f0f0;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
